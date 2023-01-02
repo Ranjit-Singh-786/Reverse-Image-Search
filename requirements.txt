@@ -1,0 +1,7 @@
+numpy
+pandas
+tensorflow
+cv2
+sklearn
+streamlit
+-e .
