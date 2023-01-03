@@ -47,19 +47,13 @@ def result():
        Distances, indices = neighbors.kneighbors(np.expand_dims(features, axis=0))
        file_paths = getfilepath(indices)
 
-
-       if features is not None:
-           data = "done"
-       else:
-           data = 'offff'
-            
-    
-    return render_template('result.html',fil = uploaaded_file,
-        b= basepath,
-        c=file_path,
-        d = data,
-        e = indices,
-        f = file_paths)
+                
+    return render_template('result.html',file1 = file_paths[0],
+        file2 = file_paths[1],
+        file3 = file_paths[2],
+        file4 = file_paths[3],
+        file5 = file_paths[4],
+        loaded_file = file_path)
 
 if __name__  == "__main__":
     app.run(debug=True)
