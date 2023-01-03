@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.resnet50 import preprocess_input
-ResNet50 = pickle.load(open('models/resnet50.h5','rb'))
+
 
 class FeaturExtraction:
 
@@ -12,6 +12,6 @@ class FeaturExtraction:
         img_array = image.img_to_array(img)
         expanded_img_array = np.expand_dims(img_array, axis=0)
         preprocessed_img = preprocess_input(expanded_img_array)
-        result = ResNet50.predict(preprocessed_img).flatten()
+        result = model.predict(preprocessed_img).flatten()
         normalized_result = result / norm(result)
         return normalized_result

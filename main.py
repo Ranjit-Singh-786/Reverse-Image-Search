@@ -1,4 +1,4 @@
-import streamlit as st
+# import streamlit as st
 import os
 from PIL import Image
 import numpy as np
@@ -7,7 +7,7 @@ import tensorflow
 from numpy.linalg import norm
 from Feuture_extraction.feature_extraction import FeaturExtraction
 feature_extraction = FeaturExtraction()
-
+app = Flask(__name__)
 feature_list = np.array(pickle.load(open('models/feature.pkl','rb')))
 filenames = pickle.load(open('models/filenames.pkl','rb'))
 neighbors = pickle.load(open('models/NearestNeighbour.pkl','rb'))
@@ -51,3 +51,5 @@ if uploaded_file is not None:
     else:
         st.header("Some error occured in file upload")
 
+if __name__=="__main__":
+    app.run()
