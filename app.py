@@ -53,7 +53,8 @@ def result():
         file3 = file_paths[2],
         file4 = file_paths[3],
         file5 = file_paths[4],
-        loaded_file = file_path)
+        loaded_file = file_path,
+        filepat = file_paths)
 
 if __name__  == "__main__":
     app.run(debug=True)

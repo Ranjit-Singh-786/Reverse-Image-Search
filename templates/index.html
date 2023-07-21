@@ -3,10 +3,34 @@
         <title>Reverse Image Search</title>
     </head>
     <body>
-        <h1>Upload your image</h1>
-        <form action="{{url_for('result')}}" method="post" enctype="multipart/form-data">
-            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg"><br>
-            <input type="submit">
-        </form>
+     
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color: aqua;">
+            <h1>Reverse Image Search</h1>
+            <form action="{{url_for('result')}}" method="post" enctype="multipart/form-data" >
+                <input type="file" name="file" id="btn"  accept=".png, .jpg, .jpeg">
+                <input type="submit" id="btn" >
+            </form>
+        </div>
+
+        <style>
+             #btn{
+                            border: 3px solid black;
+                            border-radius: 50px;
+                            background-color:rgb(105, 104, 102);
+                            width: 210px;
+                            height: 35px;
+                            font-size: 15px;
+                            color: whitesmoke;
+                            box-shadow: 2px 8px 5px rgb(95, 93, 93);
+                
+                        }
+                        #btn:hover{
+                            background-color: rgb(240, 238, 230);
+                            color: rgb(19, 18, 18);
+                            border-color: transparent;
+                            border-color: rgb(14, 13, 13);
+                            box-shadow: 2px 8px 5px rgb(20, 20, 20);
+                        }
+        </style>
     </body>
 </html>

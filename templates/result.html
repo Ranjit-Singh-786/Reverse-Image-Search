@@ -7,26 +7,32 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
-<body >
+<body style="background-color:aqua;">
     
 
 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-            </div>
+            </div >
 
                   
              <!-- we are executing this loop through the range -->
-                <div class="col-md-3" style="margin-top:50px">
+                <div class="col-md-3" style="margin-top:50px; " >
                     <div class="card">
                         <div class="card-body">
-
+                    <!-- <p>{{ filepat }}</p> -->
                             <h2>This is your uploaded image</h2>
-                            <img class="card-img-top" src="{{ file1 }}">
+                            
+                            <p> {{ loaded_file }}</p>
                             <h2>This is your similar image</h2>
-                            <img class="card-img-top" src="{{ file1 }}">
-                            <img class="card-img-top" src="{{ file2 }}">
+                            <p>{{ file1 }}</p>
+                            <p>{{ file2 }}</p>
+                            <p>{{ file3 }}</p>
+                            <p>{{ file4 }}</p>
+                            <p>{{ file5 }}</p>
+                            <img  src={{ file1 }}>
+                            <img  src="{{ file2 }}">
                             <img class="card-img-top" src="{{ file3 }}">
                             <img class="card-img-top" src="{{ file4 }}">
                             <img class="card-img-top" src="{{ file5 }}">
